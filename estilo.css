@@ -1,39 +1,13 @@
-/*Isso é um comentario*/
+/*Isso Ã© um comentario*/
 #container{
 	/*background-color: blue; */
-	width:70%; /*largura*/
-	height: 100%; /*altura*/
+
 	margin: 0px auto 0px auto;
 	border-color: #191970 ;
 	border-style:double ;
-	border-width: 9px;
-	text-align: center;
-	background-color: #F8F8FF ;
-}	
-input[type=text]{     
-    border-radius:4px;
-    -moz-border-radius:4px;
-    -webkit-border-radius:4px;
-    box-shadow: 1px 1px 2px #333333;    
-    -moz-box-shadow: 1px 1px 2px #333333;
-    -webkit-box-shadow: 1px 1px 2px #333333;
-    background: #cccccc; 
-    border:1px solid #000000;
-    width:150px
+	border-width: 10px;
 
-}
-input[type=select]{     
-    border-radius:4px;
-    -moz-border-radius:4px;
-    -webkit-border-radius:4px;
-    box-shadow: 1px 1px 2px #333333;    
-    -moz-box-shadow: 1px 1px 2px #333333;
-    -webkit-box-shadow: 1px 1px 2px #333333;
-    background: #cccccc; 
-    border:1px solid #000000;
-    width:150px
-
-}
+	}
 #txt_name{
 	border-width: 1px;
 	border-color: black;
@@ -74,6 +48,11 @@ width: 70%; /*largura*/
 	#txt_Qvagas{
 	border-width: 1px;
 	border-color: black;
-	text-align: center left ;
+	text-align: center ;
 	width: 25%; /*largura*/
+
+}
+
+.centralizada{
+	margin: 0 auto;
 }
