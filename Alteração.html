@@ -18,43 +18,65 @@
 		
 	</head>
 	<body>
-		<div id="container">
-		<div class="imgpos">
-     <img src="C:/xampp/htdocs/Isabella(projeto)/wbs.jpg" width="150" height="90" />
-</div>
+		<div id="container" class="container">
+		<img class="img-responsive centralizada"src="C:/xampp/htdocs/Isabella(projeto)/wbs.jpg" width="150" height="90" />
 			<h1> Alteração do Centro de Interesse</h1>
 			<form action="#">
 				<br /> <br />
-				<select id="txt_nomedoci">
-					<option value="padrao"> Nome do CI</option>
+				<div class="form-group">
+				<label for="txt_codigo">Nome do Centro de Interesse:</label>
+				 <select id="txt_name"
+					class="form-control">
+					<option value="musica"> </option>
 					<option value="musica">Música </option>
 					<option value="teatro">Teatro </option>
-					<option value="teatro">Dança </option>
-					<option value="teatro">Espanhol </option>
-					<option value="teatro">Ingles </option>
-					<option value="teatro">Futsal</option>
+					<option value="Danca">Dança </option>
+					<option value="Espanhol">Espanhol </option>
+					<option value="Ingles">Ingles </option>
+					<option value="Futsal">Futsal</option>
 					<option value ="programacao">Programção </option> 
-				</select>
-				<br /> <br />
-				<input placeholder="Quantidade de Vagas:" type="number" id="txt_Qvagas"/  >
-				<br /> <br />
-				Editar	horário início:		<input  type="time" id="txt_datahorario" />
-				Editar	Data  início:	<input  type="date" id="txt_datahorario" />
-				<br/> <br />
-				Editar	horário termino:	<input " type="time" id="txt_datahorario" />
-				Editar	Data  termino:	<input type="date" id="txt_datahorario" /> 
-			<br /> <br />
-				<input placeholder="Editar orientador:"  type="text" id="txt_email"> 
-				<br /> <br />
-				<input type="checkbox" id="ckbox_confirma"> Declaro estar ciente, que ao alterar o sistema, ele irá operar como tal.
-				<br /><br />
+					</select>
+					</div>
+				<div class="form-group">
+				<label for="txt_codigo">Editar Quantidade de vagas:</label>
+					<input  type="number" class="form-control" id="txt_datahorario" />
+				</div>
+				<div class="form-group">
+					<label for="txt_codigo"> Editar horário de início:</label>
+					<input placeholder="horário de início" type="time" class="form-control" id="txt_datahorario" />
+				</div>
+				<div class="form-group">
+					<label for="txt_codigo">Editar horário de termino:</label>
+					<input placeholder="horário de início" type="time" class="form-control" id="txt_datahorario" />
+				</div>
+				<div class="form-group">
+					<label for="txt_codigo">Editar Data de início:</label>
+					<input placeholder="horário de início" type="date" class="form-control" id="txt_datahorario" />
+				</div>
+				<div class="form-group">
+					<label for="txt_codigo">Editar Data de termino:</label>
+					<input placeholder="horário de início" type="date" class="form-control" id="txt_datahorario" />
+				</div>
+					
+				<div class="form-group">
+					<label for="txt_codigo">Editar Orientador:</label>
+					<!-- a tag input representa uma entrada de dados do usuario, é necessário informar o tipo desta entrada de dados. -->
+					<input type="text"
+						class="form-control" id="txt_name" />
+						<br />
+				<div class="form-group">
+					<input type="checkbox" id="ckbox_confirma" />  
+					<label for="ckbox_confirma">Declaro estar ciente, que ao alterar o sistema, ele irá operar como tal.</label>
+				</div>
+				<div class="botao-centro">
+					<button type="button" class="btn btn-danger btn">
+					  	<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancelar
+					</button>
+					<button type="button" class="btn btn-success btn">
+					  	<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Cancelar
+				</div>
+					</button> 
 				
-				<button type="button" class="btn btn-danger btn">
-  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancelar
-</button>
-				<button type="button" class="btn btn-success btn">
-  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Cancelar
-</button>
 			</form>
 		</div>
 	<!--
