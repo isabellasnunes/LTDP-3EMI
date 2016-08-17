@@ -24,14 +24,14 @@
 			<header class="centralizado">
 			<h1> Formulário de Inscrição </h1>
 			</header>
-			<form action="#">
-			<form id="formulario" action="inscricao.php" role="form" method="post" />
+			                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+			  <form id="formulario" action="inscricao.php" role="form" method="post">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 				<div class="form-group">
 				<span class="glyphicon glyphicon-user"></span>
 					<label for="txt_codigo">Nome:</label>
 					<!-- a tag input representa uma entrada de dados do usuario, é necessário informar o tipo desta entrada de dados. -->
 					<input type="text"
-						class="form-control" id="txt_name" />
+						class="form-control" id="txt_name" name="nome" />
 				</div>
 				<div class="form-group">
 				<span class="glyphicon glyphicon-book"></span>
@@ -82,17 +82,15 @@
 					<label for="ckbox_confirma">Declaro estar ciente, que não poderei trocar de centro de interesse durante o semestre</label>
 				</div>
 				<div class="botao-centro">
-					<button type="button" class="btn btn-danger btn">
+					<button type="reset" class="btn btn-danger btn">
 					  	<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancelar
 					</button>
-					<button type="button" class="btn btn-success btn">
-					  	<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Cancelar
-				</div>
+					<button type="submit" class="btn btn-success btn">
+					  	<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Enviar
 					</button>
-				
-			
-			</form>
-		</div>
+				</div>
+			</form>		
+			</div>
 	
 	<!--
 	https://github.com/terenciani/3-EMI
