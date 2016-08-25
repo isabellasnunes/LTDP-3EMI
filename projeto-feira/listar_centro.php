@@ -59,17 +59,27 @@
 									
 									$sql = mysql_query("SELECT * FROM tb_centro_interesse");
 									while($resultado = mysql_fetch_array($sql)){
+										$codigocentro = $resultado['id_centro_interesse'];
 										$nome = $resultado['nome'];
-										
+										$descricao = $resultado['descricao'];
+										$horario_inicio = $resultado['horario_inicio'];
+										$horario_termino =$resultado['horario_termino'];
+										$orientador = $resultado['orientador'];
+										$quantidade_vagas = $resultado['quantidade_vagas'];
+									
 									
 								
 										echo "<tr>
 												<td>".$nome."</td>
-												<td></td>
-												<td></td>
-												<td>
-													<a href='download_editar.php?id=".$id_downloads."' title='Editar' class='glyphicon glyphicon-edit options-edit'></a>
-													<a href='download_deletar.php?id=".$id_downloads."' id='link-delete' title='Deletar' class='glyphicon glyphicon-minus-sign options-delet' data-title='Exclusão'></a>
+												<td>".$descricao."</td>
+												<td>".$horario_inicio."</td>
+												<td>".$horario_termino."</td>
+												<td>".$orientador."</td>
+												<td>".$quantidade_vagas."</td>
+													
+												<a href='editar_centro.php?id=".$codigocentro."' title='Editar' class='glyphicon glyphicon-edit options-edit'></a>
+													<a href='deletar_centro.php?id=".$codigocentro."' id='link-delete' title='Deletar' class='glyphicon glyphicon-minus-sign options-delet' data-title='Exclusão'></a>
+												
 												</td>
 											  </tr>";
 									}
