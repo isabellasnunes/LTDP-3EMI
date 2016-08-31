@@ -1,7 +1,7 @@
 <! DOCTYPE html>
 <html lang="pt-br">
 	<head>
-		<meta charset="utf-8">
+		
 		<title>..:: lista do CI ::..</title>
 		
 		<!--  Nucleo do jquery -->
@@ -13,16 +13,19 @@
 		
 		
 			<section class="container">
-				<h1 id="admin">Listar Downloads</h1>
+				<h1 id="admin">Listar Centro de Interesse</h1>
 				<div class="thumbnail" id="conteudo">
 					<form id="mainform" action="">
 						<table width="100%" class="table-striped" id="product-table">
 							<thead>
 								<tr>
-									<th>Cod. Download</th>
-									<th>Título do Download</th>
-									<th>Categoria</th>
-									<th>Opções</th>
+									<th>Nome</th>
+									<th>Descricao</th>
+									<th>Hora Inicio</th>
+									<th>Hora Termino</th>
+									<th>Orientador</th>
+									<th>Quantidade Vagas</th>
+									<th></th>
 								</tr>
 							</thead>
 							<tbody>
@@ -51,7 +54,7 @@
 								
 								
 								
-									// Corrige a codificação
+									// Corrige a acentuacao
 									mysql_query("SET NAMES 'utf8'");
 									mysql_query('SET character_set_connection=utf8');
 									mysql_query('SET character_set_client=utf8');
@@ -76,7 +79,7 @@
 												<td>".$horario_termino."</td>
 												<td>".$orientador."</td>
 												<td>".$quantidade_vagas."</td>
-													
+												<td>	
 												<a href='editar_centro.php?id=".$codigocentro."' title='Editar' class='glyphicon glyphicon-edit options-edit'></a>
 													<a href='deletar_centro.php?id=".$codigocentro."' id='link-delete' title='Deletar' class='glyphicon glyphicon-minus-sign options-delet' data-title='Exclusão'></a>
 												
@@ -90,7 +93,7 @@
 				</div>
 			</section>
 			<footer class="row footer">
-				Rodape
+				hola, mucho gusto!
 			</footer>	
 		<!-- END: footer -->
 		</div>
