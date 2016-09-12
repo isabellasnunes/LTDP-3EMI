@@ -2,6 +2,8 @@
 	var_dump ($_POST);
 	
 	$nome = $_POST['nome'];
+	 
+	
 	$descricao = $_POST['descricao'];
 	$horario_inicio = $_POST['horario_inicio'];
 	$horario_termino = $_POST['horario_termino'];

@@ -1,24 +1,34 @@
 <! DOCTYPE html>
 <html lang="pt-br">
+
 	<head>
+		<link href="estilo.css" rel="stylesheet">
+		<link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet"/>
+		<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 		
 		<title>..:: lista do CI ::..</title>
+		
 		
 		<!--  Nucleo do jquery -->
 		<link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" />
 		
-	</head>
+	
 	<body>
-		<div class="container-fluid">
+		<div id="container" class="container"> 
 		
 		
 			<section class="container">
+			
 				<h1 id="admin">Listar Centro de Interesse</h1>
-				<div class="thumbnail" id="conteudo">
+			<div class="table-responsive" id="conteudo">
 					<form id="mainform" action="">
 						<table width="100%" class="table-striped" id="product-table">
+					
 							<thead>
 								<tr>
+								
+								<div class="form-group">
+				
 									<th>Nome</th>
 									<th>Descricao</th>
 									<th>Hora Inicio</th>
@@ -26,6 +36,9 @@
 									<th>Orientador</th>
 									<th>Quantidade Vagas</th>
 									<th></th>
+			
+								</div>
+								
 								</tr>
 							</thead>
 							<tbody>
@@ -70,9 +83,8 @@
 					</form>
 				</div>
 			</section>
-			<footer class="row footer">
-				hola, mucho gusto!
-			</footer>	
+		</head>
+			
 		<!-- END: footer -->
 		</div>
 		<script src="jquery/jquery-1.12.3.min.js" type="text/java"></script>

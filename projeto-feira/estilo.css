@@ -1,7 +1,7 @@
 /*Isso Ã© um comentario*/
 #container{
 	/*background-color: blue; */
-
+	
 	margin: 0px auto 0px auto;
 	border-color: #191970 ;
 	border-style:double ;
@@ -53,5 +53,5 @@ width: 70%; /*largura*/
 }
 
 .centralizada{
-	margin: 0 auto;
+	text-align: center;
 }
