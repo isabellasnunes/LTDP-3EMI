@@ -1,35 +1,68 @@
-<?php
+<! DOCTYPE html>
+<html lang="pt-br">
+<head>
+<link href="estilo.css" rel="stylesheet">
+<link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" />
+<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 
-include 'includes/conexao.php';
-
-$codigo = $_GET['id'];
-
-$sql = mysql_query("SELECT * FROM tb_centro_interesse WHERE id_centro_interesse =  '".$codigo."' ");
-
-$resultado = mysql_fetch_array($sql);
-
-
-$codigocentro = $resultado['id_centro_interesse'];
-$nome = $resultado['nome'];
-$descricao = $resultado['descricao'];
-$horario_inicio = $resultado['horario_inicio'];
-$horario_termino =$resultado['horario_termino'];
-$orientador = $resultado['orientador'];
-$quantidade_vagas = $resultado['quantidade_vagas'];
+<title>..:: Editar o CI ::..</title>
 
 
+<!--  Nucleo do jquery -->
+<link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
 
+	                                                                          
+	<?php
 
-?>
-<form id="form1" name="form1" method="post" action="atualizar_centro.php">
-<table width="400" border="0" align="center">
-<tr><td width="1">nome:</td>
-<td width="400"><input name="nome" type="text" size="50" id="nome" maxlength="100" value="<?php echo $nome; ?>" /></td>
-</tr>
+		include 'includes/conexao.php';
+		
+		$codigo = $_GET['id'];
+		
+		$sql = mysql_query("SELECT * FROM tb_centro_interesse WHERE id_centro_interesse =  '".$codigo."' ");
+		
+		$resultado = mysql_fetch_array($sql);
+		
+		
+		$codigocentro = $resultado['id_centro_interesse'];
+		$nome = $resultado['nome'];
+		$descricao = $resultado['descricao'];
+		$horario_inicio = $resultado['horario_inicio'];
+		$horario_termino =$resultado['horario_termino'];
+		$orientador = $resultado['orientador'];
+		$quantidade_vagas = $resultado['quantidade_vagas'];
+		
+		
+	?>
+	<body>
+<div id="container" class="container">
 
-<tr><td width="1">descricao:</td>
-<td width="400"><input name="descricao" type="text" size="50" id="descricao" maxlength="100" value="<?php echo $descricao; ?>" /></td>
-</tr>
+	<img class="img-responsive centralizada"src="C:/xampp/htdocs/Isabella(projeto)/wbs.jpg" width="150" height="90" />
+	
+	<header class="centralizado">
+	<h1> Editar Centro </h1>
+	</header>
+	
+	<form id="form1" name="form1" method="post" action="atualizar_centro.php">
+	
+		<div class="form-group">
+			<span class="glyphicon glyphicon-user"></span>
+				<label for="txt_codigo">Nome:</label>
+				<!-- a tag input representa uma entrada de dados do usuario, é necessário informar o tipo desta entrada de dados. -->
+				<input type="text"
+					class="form-control" id="txt_name" name="nome" value="<?php echo $nome; ?>"/>
+		</div>
+			<div class="form-group">
+			<span class="glyphicon glyphicon-user"></span>
+				<label for="txt_codigo">Descrição:</label>
+				<!-- a tag input representa uma entrada de dados do usuario, é necessário informar o tipo desta entrada de dados. -->
+				<input type="text"
+					class="form-control" id="txt_name" name="nome" value="<?php echo $descricao; ?>"/>
+		</div>
+					
+				
+				
+
 
 <tr><td width="1">horario inicio:</td>
 <td width="400"><input name="horario_inicio" type="text" size="50" id="horario_inicio" maxlength="100" value="<?php echo $horario_inicio; ?>" /></td>
@@ -51,3 +84,4 @@ $quantidade_vagas = $resultado['quantidade_vagas'];
 </tr>
 </table>
 </form>
+</html>
