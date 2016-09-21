@@ -1,6 +1,8 @@
 <! DOCTYPE html>
 <html lang="pt-br">
 <head>
+
+
 <link href="estilo.css" rel="stylesheet">
 <link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" />
 <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
@@ -14,7 +16,12 @@
 
 	                                                                          
 	<?php
-
+	// Corrige a acentuacao
+	mysql_query ( "SET NAMES 'utf8'" );
+	mysql_query ( 'SET character_set_connection=utf8' );
+	mysql_query ( 'SET character_set_client=utf8' );
+	mysql_query ( 'SET character_set_results=utf8' );
+	
 		include 'includes/conexao.php';
 		
 		$codigo = $_GET['id'];
@@ -35,6 +42,7 @@
 		
 	?>
 	<body>
+	<meta charset="utf-8"></meta>
 <div id="container" class="container">
 
 	<img class="img-responsive centralizada"src="C:/xampp/htdocs/Isabella(projeto)/wbs.jpg" width="150" height="90" />
@@ -53,34 +61,39 @@
 					class="form-control" id="txt_name" name="nome" value="<?php echo $nome; ?>"/>
 		</div>
 			<div class="form-group">
-			<span class="glyphicon glyphicon-user"></span>
+			<span class="glyphicon glyphicon-edit"></span>
 				<label for="txt_codigo">Descrição:</label>
 				<!-- a tag input representa uma entrada de dados do usuario, é necessário informar o tipo desta entrada de dados. -->
 				<input type="text"
 					class="form-control" id="txt_name" name="nome" value="<?php echo $descricao; ?>"/>
-		</div>
-					
+		<div class="form-group">
+					<label for="txt_codigo">horário de início:</label>
+					<input type="time"
+				class="form-control" id="txt_name" name="nome" value="<?php echo $horario_inicio; ?>"/>
 				
+				</div>
+		<div class="form-group">
+					<label for="txt_codigo">horário de termino:</label>
+					<input tipo="time"
+				class="form-control" id="txt_name" name="nome" value="<?php echo $horario_termino; ?>"/>
 				
-
-
-<tr><td width="1">horario inicio:</td>
-<td width="400"><input name="horario_inicio" type="text" size="50" id="horario_inicio" maxlength="100" value="<?php echo $horario_inicio; ?>" /></td>
-</tr>
-
-<tr><td width="1">horario termino:</td>
-<td width="400"><input name="horario_termino" type="text" size="50" id="horario_termino" maxlength="100" value="<?php echo $horario_termino; ?>" /></td>
-</tr>
-
-<tr><td width="1">orientador:</td>
-<td width="400"><input name="orientador" type="text" size="50" id="orientador" maxlength="100" value="<?php echo $orientador; ?>" /></td>
-</tr>
-
-<tr><td width="1">quantidade vagas:</td>
-<td width="400"><input name="quantidade_vagas" type="text" size="50" id="quantidade_vagas" maxlength="100" value="<?php echo $quantidade_vagas; ?>" /></td>
-</tr>
-
-<input type="submit" name="submit" value="Salvar"></td>
+				</div>
+						
+				<div class="form-group">
+				<span class="glyphicon glyphicon-pencil"></span>
+					<label for="txt_codigo">Orientador:</label>
+					<!-- a tag input representa uma entrada de dados do usuario, é necessário informar o tipo desta entrada de dados. -->
+					<input type="text"
+						class="form-control" id="txt_name" name="nome" value="<?php echo $orientador; ?>"/>
+				</div>		
+				
+			</div>
+				<div class="form-group">
+				<label for="txt_codigo">Quantidade de vagas:</label>
+					<input tipo="number"
+					class="form-control" id="txt_name" name="nome" value="<?php echo $quandidade_vagas; ?>"/>
+				</div>		
+		<input type="submit" name="submit" value="Salvar"></td>
 </tr>
 </table>
 </form>
